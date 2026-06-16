@@ -197,7 +197,7 @@ function Quote({
 
 const HERO_STATS = [
   { value: "~100M", label: "vaccinations scheduled", sub: "in the first six months" },
-  { value: "100+", label: "organizations \u00b7 10+ countries", sub: "in the first six months" },
+  { value: "100+", label: "organizations 10+ countries", sub: "in the first six months" },
   { value: "$5M+", label: "ARR today", sub: "1,000+ customers, 15+ countries" },
   { value: "2022", label: "Webby Award", sub: "People's Voice Winner" },
 ]
@@ -226,7 +226,7 @@ const TIMELINE = [
   {
     date: "Jan 22, 2021",
     title: "Launch — Project Fair Shot",
-    body: "Planned for February, we pulled the launch forward as vaccine sites crashed worldwide and offered the service free to vaccine distributors. I owned the announcement end-to-end.",
+    body: "Planned for the end of March, we pulled the launch forward as vaccine sites crashed worldwide and offered the service free to vaccine distributors. I owned the announcement end-to-end.",
   },
   {
     date: "Mid 2021",
@@ -293,7 +293,7 @@ export default function App() {
               <span className="text-foreground underline decoration-brand-300 decoration-4 underline-offset-8">Waiting Room</span>
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-xl leading-relaxed text-muted-foreground">
-              A virtual Waiting Room helping organizations manage peak traffic by routing excess users to a custom-branded waiting room. This ensures a seamless online experience and protects origin servers from being overwhelmed. Conceived and built from zero to one, then launched into the middle of a global pandemic.
+              A virtual Waiting Room helping organizations manage peak traffic by routing excess users to a custom-branded waiting room. This ensures a seamless online experience and protects origin servers from being overwhelmed.
             </p>
             <p className="mt-6 text-base text-muted-foreground">
               <span className="font-semibold text-foreground">Brian Batraski</span> — Product owner
@@ -359,8 +359,8 @@ export default function App() {
               <CardTitle className="text-lg">Acute in healthcare</CardTitle>
             </CardHeader>
             <CardContent className="text-sm leading-relaxed text-muted-foreground">
-              The pain was sharpest in health and health-tech: people couldn't book vaccine
-              appointments, see doctors, or schedule follow-ups. A global need affecting billions.
+              The pain was sharpest in healthcare: people couldn't book vaccine
+              appointments, see doctors, or schedule follow-ups. A global need affecting hundreds of millions.
             </CardContent>
           </Card>
           <Card>
@@ -392,7 +392,7 @@ export default function App() {
           intro={
             <>
               This wasn't one site on one bad day. As offices and government services closed,
-              billions of people shifted to online channels that had been sized for a pre-pandemic
+              hundreds of millions of people shifted to online channels that had been sized for a pre-pandemic
               world — and vaccine rollouts guaranteed demand would exceed supply, over and over, in
               every region.
             </>
@@ -435,7 +435,7 @@ export default function App() {
           <Card className="bg-slate-900 text-white">
             <CardContent className="flex h-full flex-col justify-center gap-6 p-8">
               <div>
-                <div className="text-5xl font-extrabold tracking-tight text-brand-400">Billions</div>
+                <div className="text-5xl font-extrabold tracking-tight text-brand-400">Hundreds of millions</div>
                 <div className="mt-1 text-sm text-white/80">
                   of people newly dependent on online health & government services
                 </div>
@@ -569,7 +569,7 @@ export default function App() {
             <div className="rounded-xl border-l-4 border-brand-400 bg-muted/60 p-5">
               <p className="text-sm leading-relaxed text-foreground">
                 <span className="font-semibold">The call to move fast:</span> the product was planned
-                for February. Watching vaccine sites crash in real time, we pulled the launch forward
+                for the end of March. Watching vaccine sites crash in real time, we pulled the launch forward
                 and made it free to distributors — and <Cite href={S.fairShot}>Project Fair Shot</Cite>{" "}
                 was born.
               </p>
@@ -604,7 +604,7 @@ export default function App() {
                 We let a Fortune 1000 food-delivery app run on the still-beta product during the
                 Super Bowl — an event we simply shouldn't have allowed at that stage. A bug in the
                 queueing and cookie-handling logic caused repeated re-queueing: users were stuck in
-                limbo, unable to pay for orders, and our own engineers were locked out of the app
+                limbo, unable to pay for orders, and their own engineers were locked out of the app
                 they needed to debug.
               </p>
               <p>
@@ -676,9 +676,9 @@ export default function App() {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                We rebuilt the budgeting service and moved to two-stage aggregation — colo-level plus
-                global — with caching, so state stays fresh enough to make accurate queueing
-                decisions without overloading any single coordinator.{" "}
+                We rebuilt the budgeting service — with deep optimizations, so state stays fresh
+                enough to make accurate queueing decisions without overloading any single
+                coordinator.{" "}
                 <Cite href={S.tech}>(how it works)</Cite>
               </AccordionContent>
             </AccordionItem>
@@ -714,7 +714,7 @@ export default function App() {
         />
         <div className="mb-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
           <Stat value="~100M" label="Vaccinations scheduled" sub="in the first six months" />
-          <Stat value="100+" label="Organizations \u00b7 10+ countries" sub="in the first six months" />
+          <Stat value="100+" label="Organizations 10+ countries" sub="in the first six months" />
           <Stat value="1,000+" label="Customers today" sub="15+ countries" />
           <Stat value="$5M+" label="Annual recurring revenue" sub="commercial product line" />
         </div>
@@ -799,29 +799,24 @@ export default function App() {
               {
                 icon: Server,
                 t: "User slots",
-                d: "Available slots = the customer's limit minus active users. When slots reach zero, the room starts queueing.",
               },
               {
                 icon: Network,
                 t: "Per-data-center budgets from history",
-                d: "Each data center's share is derived from its traffic ratio two minutes in the past. Historical data can't change, so it stays accurate even when live data is still propagating — and avoids constant cross-DC chatter.",
               },
               {
                 icon: Clock,
                 t: "Time buckets & fair ordering",
-                d: "Users are clustered into time buckets instead of tracked individually; the oldest buckets get the next available slots first, which is what makes the queue fair.",
               },
               {
                 icon: ShieldCheck,
                 t: "Encrypted cookie ticket",
-                d: "Each visitor carries an encrypted ticket (arrival bucket, accepted time, last-seen). Estimated wait = people ahead of your bucket ÷ average admitted per minute.",
               },
             ].map((row) => (
               <div key={row.t} className="flex gap-4 rounded-xl border bg-card p-5">
                 <row.icon className="mt-0.5 h-6 w-6 shrink-0 text-foreground" />
                 <div>
                   <div className="font-semibold">{row.t}</div>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{row.d}</p>
                 </div>
               </div>
             ))}

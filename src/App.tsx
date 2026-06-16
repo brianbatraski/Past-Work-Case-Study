@@ -301,7 +301,7 @@ export default function App() {
               and customer success.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="brand" size="lg">
                 <a href={S.waitingRoom} target="_blank" rel="noreferrer">
                   Launch blog (authored)
                 </a>

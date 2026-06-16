@@ -206,12 +206,12 @@ const TIMELINE = [
   {
     date: "Feb 2020",
     title: "The idea",
-    body: "A handful of us connected a recurring customer pain — sudden demand that outstrips supply — to the network we already operated. The same primitive that fairly queues shoppers for a sneaker drop or concert could protect any site from a traffic spike.",
+    body: "A handful of us connected a recurring customer pain, sudden demand that outstrips supply, to the network we already operated. The same primitive that fairly queues shoppers for a sneaker drop or concert could protect any site from a traffic spike.",
   },
   {
     date: "Apr 2020",
     title: "Design & build begins",
-    body: "I began designing the product and shaping the customer experience, with the goal of something that 'just works' — no code changes, deployable via a DNS change, configured in minutes.",
+    body: "I began designing the product and shaping the customer experience, with the goal of something that 'just works': no code changes, deployable via a DNS change, configured in minutes.",
   },
   {
     date: "Q3 2020",
@@ -221,7 +221,7 @@ const TIMELINE = [
   {
     date: "Q4 2020",
     title: "Re-architecting the core",
-    body: "Beta learnings forced us to re-architect the budgeting service — the crux of how Waiting Room decides who waits and who gets in. Painful, but it made the product trustworthy at scale.",
+    body: "Beta learnings forced us to re-architect the budgeting service, the crux of how Waiting Room decides who waits and who gets in.",
   },
   {
     date: "Jan 22, 2021",
@@ -231,7 +231,7 @@ const TIMELINE = [
   {
     date: "Mid 2021",
     title: "Business & Enterprise GA",
-    body: "Waiting Room rolled out as a paid product on Business and Enterprise plans — the commercial foundation the free campaign had de-risked and proven.",
+    body: "Waiting Room rolled out as a paid product on Business and Enterprise plans, the commercial foundation the free campaign had de-risked and proven.",
   },
 ]
 
@@ -239,7 +239,7 @@ const CASE_STUDIES = [
   {
     name: "County of San Luis Obispo",
     metric: "23,000-user surges",
-    body: "Our first official onboarding — completed in a couple of days right before launch — regularly handled 20,000+ appointments a day.",
+    body: "Our first official onboarding, completed in a couple of days right before launch, regularly handled 20,000+ appointments a day.",
     href: S.caseSLO,
   },
   {
@@ -255,7 +255,7 @@ const CASE_STUDIES = [
     href: S.caseTicketTailor,
   },
   {
-    name: "Latvia — Ministry of Health",
+    name: "Latvia (Ministry of Health)",
     metric: "Stayed online",
     body: "Kept a national vaccination system available through surges of thousands of requests per second.",
     href: S.caseLatvia,
@@ -269,7 +269,7 @@ const CASE_STUDIES = [
   {
     name: "A European country",
     metric: "3M+ in <24h",
-    body: "More than three million people passed through the Waiting Room in under a day — smoothly.",
+    body: "More than three million people passed through the Waiting Room in under a day.",
     href: S.fairShotUpdate,
   },
 ]
@@ -296,7 +296,7 @@ export default function App() {
               A virtual Waiting Room helping organizations manage peak traffic by routing excess users to a custom-branded waiting room. This ensures a seamless online experience and protects origin servers from being overwhelmed.
             </p>
             <p className="mt-6 text-base text-muted-foreground">
-              <span className="font-semibold text-foreground">Brian Batraski</span> — Product owner
+              <span className="font-semibold text-foreground">Brian Batraski</span>, Product owner
               (0→1). Owned the concept, drove the technical design and customer experience, and led
               the <Cite href={S.fairShot}>Project Fair Shot</Cite> launch across marketing, sales,
               and customer success.
@@ -336,9 +336,9 @@ export default function App() {
           intro={
             <>
               As the pandemic pushed the world online overnight, web applications saw traffic spikes
-              far outside any seasonal pattern or peak they'd ever measured. Sites went down — not
-              from attackers, but from sheer simultaneous demand — eroding brand trust, losing
-              revenue, and driving customers away.
+              far outside any seasonal pattern or peak they'd ever measured. Sites went down from
+              sheer simultaneous demand, eroding brand trust, losing revenue, and driving customers
+              away.
             </>
           }
         />
@@ -370,7 +370,7 @@ export default function App() {
             </CardHeader>
             <CardContent className="text-sm leading-relaxed text-muted-foreground">
               When sites crashed and reloaded, scarce appointments went to whoever had the fastest
-              reflexes and connection — not those who needed them most.
+              reflexes and connection, not those who needed them most.
             </CardContent>
           </Card>
         </div>
@@ -393,7 +393,7 @@ export default function App() {
             <>
               This wasn't one site on one bad day. As offices and government services closed,
               hundreds of millions of people shifted to online channels that had been sized for a pre-pandemic
-              world — and vaccine rollouts guaranteed demand would exceed supply, over and over, in
+              world. Vaccine rollouts then guaranteed demand would exceed supply, over and over, in
               every region.
             </>
           }
@@ -416,7 +416,7 @@ export default function App() {
               <div>
                 <div className="font-semibold">Demand &gt; supply, on repeat</div>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Appointments opened at a fixed moment to a region-wide audience — the textbook
+                  Appointments opened at a fixed moment to a region-wide audience, the textbook
                   recipe for a thundering-herd crash. <Cite href={S.fairShot}>(Fair Shot blog)</Cite>
                 </p>
               </div>
@@ -426,7 +426,7 @@ export default function App() {
               <div>
                 <div className="font-semibold">Stakes measured in lives</div>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Keeping a registration page up wasn't a convenience metric — it determined whether
+                  Keeping a registration page up wasn't a convenience metric. It determined whether
                   people could get a vaccine at all.
                 </p>
               </div>
@@ -444,7 +444,7 @@ export default function App() {
               <div>
                 <div className="text-5xl font-extrabold tracking-tight text-brand-400">Global</div>
                 <div className="mt-1 text-sm text-white/80">
-                  not a single market — a simultaneous need across countries and continents
+                  a simultaneous need across countries and continents
                 </div>
               </div>
             </CardContent>
@@ -456,10 +456,10 @@ export default function App() {
       <Section id="solution" className="bg-muted/30">
         <SectionHeading
           eyebrow="03 · The solution"
-          title="A fair, automatic queue that sits in front of any site — no code required"
+          title="A fair, automatic queue that sits in front of any site, no code required"
           intro={
             <>
-              Waiting Room sits in front of any application and, during a spike, routes excess users to a custom-branded page that acts as a seamless extension of the customer's own product — turning a potential outage into a stellar customer experience. It admits people only as fast as the origin can safely handle, holding everyone else on that page with an accurate, auto-refreshing wait time. The hard constraints: respect the customer's limits, keep latency low, and keep
+              Waiting Room sits in front of any application and, during a spike, routes excess users to a custom-branded page that acts as a seamless extension of the customer's own product, turning a potential outage into a stellar customer experience. It admits people only as fast as the origin can safely handle, holding everyone else on that page with an accurate, auto-refreshing wait time. The hard constraints: respect the customer's limits, keep latency low, and keep
               the experience seamless. <Cite href={S.tech}>(engineering deep-dive)</Cite>
             </>
           }
@@ -476,7 +476,7 @@ export default function App() {
               <CardTitle className="text-lg">Zero code changes</CardTitle>
             </CardHeader>
             <CardContent className="text-sm leading-relaxed text-muted-foreground">
-              Deploy via a single DNS change and configure in minutes — name, hostname, total active
+              Deploy via a single DNS change and configure in minutes: name, hostname, total active
               users, new users per minute, and session duration. It just works.{" "}
               <Cite href={S.waitingRoom}>(launch blog)</Cite>
             </CardContent>
@@ -496,8 +496,8 @@ export default function App() {
               <CardTitle className="text-lg">Already-global network</CardTitle>
             </CardHeader>
             <CardContent className="text-sm leading-relaxed text-muted-foreground">
-              Rather than build new infrastructure, we turned our existing Anycast network —
-              300+ data centers — into the queue, removing single points of failure.
+              Rather than build new infrastructure, we turned our existing Anycast network
+              (300+ data centers) into the queue, removing single points of failure.
             </CardContent>
           </Card>
         </div>
@@ -507,11 +507,11 @@ export default function App() {
       <Section id="release">
         <SectionHeading
           eyebrow="04 · Release process"
-          title="From private beta to a global launch — pulled forward when it mattered most"
+          title="From private beta to a global launch, pulled forward when it mattered most"
           intro={
             <>
               The path to GA ran through a feature-rich beta, a hard re-architecture, and a testing
-              breakthrough — then a tightly coordinated launch that I owned end-to-end.
+              breakthrough. Then a tightly coordinated launch I owned end-to-end.
             </>
           }
         />
@@ -570,8 +570,7 @@ export default function App() {
               <p className="text-sm leading-relaxed text-foreground">
                 <span className="font-semibold">The call to move fast:</span> the product was planned
                 for the end of March. Watching vaccine sites crash in real time, we pulled the launch forward
-                and made it free to distributors — and <Cite href={S.fairShot}>Project Fair Shot</Cite>{" "}
-                was born.
+                and made it free to distributors. That became <Cite href={S.fairShot}>Project Fair Shot</Cite>.
               </p>
             </div>
           </div>
@@ -581,12 +580,12 @@ export default function App() {
       {/* LESSONS */}
       <Section id="lessons" className="bg-muted/30">
         <SectionHeading
-          eyebrow="05 · Where it went wrong — and what we learned"
+          eyebrow="05 · Where it went wrong, and what we learned"
           title="A Super Bowl break-glass, stale state, and the features failure created"
           intro={
             <>
-              The most useful lessons came from the hardest moments. Two stand out — one operational,
-              one deep in the architecture — and both made the product materially better.
+              The most useful lessons came from the hardest moments. Two stand out: one operational,
+              one deep in the architecture. Both made the product materially better.
             </>
           }
         />
@@ -602,7 +601,7 @@ export default function App() {
             <CardContent className="space-y-3 text-sm leading-relaxed text-muted-foreground">
               <p>
                 We let a Fortune 1000 food-delivery app run on the still-beta product during the
-                Super Bowl — an event we simply shouldn't have allowed at that stage. A bug in the
+                Super Bowl, an event we simply shouldn't have allowed at that stage. A bug in the
                 queueing and cookie-handling logic caused repeated re-queueing: users were stuck in
                 limbo, unable to pay for orders, and their own engineers were locked out of the app
                 they needed to debug.
@@ -649,7 +648,7 @@ export default function App() {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                The incident proved some traffic must always reach the app — admins, internal
+                The incident proved some traffic must always reach the app: admins, internal
                 debugging, payment and other critical paths. That directly motivated{" "}
                 <Cite href={S.bypass}>Bypass Rules</Cite>, letting customers exempt specific users or
                 routes from the queue, no matter what.
@@ -676,7 +675,7 @@ export default function App() {
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                We rebuilt the budgeting service — with deep optimizations, so state stays fresh
+                We rebuilt the budgeting service with deep optimizations, so state stays fresh
                 enough to make accurate queueing decisions without overloading any single
                 coordinator.{" "}
                 <Cite href={S.tech}>(how it works)</Cite>
@@ -691,8 +690,7 @@ export default function App() {
               </AccordionTrigger>
               <AccordionContent>
                 Building on Durable Objects while it was still in closed beta was a calculated bet
-                that paid off — but it introduced early latency we had to engineer around. Dogfooding
-                accelerates the platform and exposes you to its rough edges at the same time.
+                that paid off, but it introduced early latency we had to engineer around.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -703,11 +701,11 @@ export default function App() {
       <Section id="impact">
         <SectionHeading
           eyebrow="06 · Reach, revenue & adoption"
-          title="Adoption spread like wildfire — and turned a free campaign into a business"
+          title="Adoption spread like wildfire and turned a free campaign into a business"
           intro={
             <>
               Project Fair Shot gave Waiting Room (plus bot management and security) away free to any
-              organization distributing the vaccine. The result was extraordinary reach — and a
+              organization distributing the vaccine. The result was extraordinary reach, and a
               durable commercial product underneath it.
             </>
           }
@@ -769,7 +767,7 @@ export default function App() {
             <div>
               <div className="font-semibold">From launch to a scaling product org</div>
               <p className="mt-1 text-sm text-muted-foreground">
-                After establishing the product, I hired a dedicated PM to grow it further —
+                After establishing the product, I hired a dedicated PM to grow it further,
                 integrating Waiting Room with bot management and other security products.
               </p>
             </div>
@@ -830,7 +828,7 @@ export default function App() {
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   Two-stage aggregation. Workers report to a per-data-center Durable Object (backed by
                   Cache for fast, in-colo sync), which reports up to a single Global Durable Object.
-                  The global object assembles the worldwide state and hands it back — so every colo
+                  The global object assembles the worldwide state and hands it back, so every colo
                   acts on a fresh picture without overwhelming any one coordinator.
                 </p>
               </CardContent>
@@ -851,7 +849,7 @@ export default function App() {
                 <Badge variant="muted">Considered</Badge>
                 <p className="pt-2">
                   KV is globally available but eventually consistent and tuned for read-heavy
-                  workloads. Waiting Room is the opposite — extremely write-heavy and intolerant of
+                  workloads. Waiting Room is the opposite: extremely write-heavy and intolerant of
                   stale data. The proof-of-concept was both too costly and too slow to reflect a spike
                   happening simultaneously across the globe.
                 </p>
@@ -866,7 +864,7 @@ export default function App() {
                   Running our own in-memory stores (e.g. Redis) in core data centers would give
                   fine-grained control, but at the cost of heavy operational overhead and a hard
                   dependency on those core locations. If core had issues, the product would fail
-                  globally — the opposite of an edge-resilient design.
+                  globally, the opposite of an edge-resilient design.
                 </p>
               </CardContent>
             </Card>
@@ -877,7 +875,7 @@ export default function App() {
                 <Badge variant="brand">Chosen</Badge>
                 <p className="pt-2">
                   One global <Cite href={S.durableObjects}>Durable Object</Cite> instance per waiting
-                  room gave us sharding for free, edge residency, and per-customer isolation — one
+                  room gave us sharding for free, edge residency, and per-customer isolation, so one
                   customer's spike can't spill into another's. We accepted the risk of building on a
                   closed-beta platform, then engineered around its early latency with the colo-level
                   cache and adaptive write rates above.

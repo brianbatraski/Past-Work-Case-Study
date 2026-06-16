@@ -287,10 +287,10 @@ export default function App() {
             <div className="mb-5 flex flex-wrap items-center gap-2">
               <Badge variant="brand">Product case study</Badge>
               <Badge variant="muted">0 → 1</Badge>
-              <Badge variant="muted">Built at Cloudflare</Badge>
+              <Badge variant="muted">Shipped at scale</Badge>
             </div>
             <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
-              Cloudflare <span className="text-foreground underline decoration-brand-300 decoration-4 underline-offset-8">Waiting Room</span>
+              <span className="text-foreground underline decoration-brand-300 decoration-4 underline-offset-8">Waiting Room</span>
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-xl leading-relaxed text-muted-foreground">
               A virtual Waiting Room helping organizations manage peak traffic by routing excess users to a custom-branded waiting room. This ensures a seamless online experience and protects origin servers from being overwhelmed. Conceived and built from zero to one, then launched into the middle of a global pandemic.
@@ -496,7 +496,7 @@ export default function App() {
               <CardTitle className="text-lg">Already-global network</CardTitle>
             </CardHeader>
             <CardContent className="text-sm leading-relaxed text-muted-foreground">
-              Rather than build new infrastructure, we turned Cloudflare's existing Anycast network —
+              Rather than build new infrastructure, we turned our existing Anycast network —
               300+ data centers — into the queue, removing single points of failure.
             </CardContent>
           </Card>

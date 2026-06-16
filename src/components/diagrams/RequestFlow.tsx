@@ -4,7 +4,7 @@ export function RequestFlowDiagram() {
       viewBox="0 0 920 380"
       className="h-auto w-full"
       role="img"
-      aria-label="Request flow: end-user traffic reaches the nearest Cloudflare data center, where a Worker either admits the request to the origin or places it in a branded waiting-room queue."
+      aria-label="Request flow: end-user traffic reaches the nearest edge data center, where a Worker either admits the request to the origin or places it in a branded waiting-room queue."
     >
       <defs>
         <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -27,10 +27,10 @@ export function RequestFlowDiagram() {
         <circle cx="113" cy="232" r="11" className="fill-slate-300" />
       </g>
 
-      {/* Cloudflare edge */}
+      {/* Edge network */}
       <g>
         <rect x="280" y="90" width="220" height="200" rx="14" className="fill-brand-50 stroke-brand-200" strokeWidth="1.5" />
-        <text x="390" y="120" textAnchor="middle" className="fill-brand-700" fontSize="14" fontWeight="800">Cloudflare global network</text>
+        <text x="390" y="120" textAnchor="middle" className="fill-brand-700" fontSize="14" fontWeight="800">Global edge network</text>
         <text x="390" y="138" textAnchor="middle" className="fill-brand-700/80" fontSize="10.5">nearest of 300+ data centers (Anycast)</text>
 
         <rect x="312" y="158" width="156" height="50" rx="10" className="fill-card stroke-brand-300" strokeWidth="1.5" />

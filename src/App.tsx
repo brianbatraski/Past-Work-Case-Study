@@ -947,30 +947,16 @@ export default function App() {
       {/* FOOTER */}
       <footer className="py-14">
         <div className="container">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-            <div className="max-w-md">
-              <div className="flex items-center gap-2.5">
-                <span className="flex h-7 w-7 items-center justify-center rounded-md bg-slate-900 text-white">
-                  <span className="h-2 w-2 rounded-full bg-brand-200" />
-                </span>
-                <span className="font-bold">Waiting Room — case study</span>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Prepared by Brian Batraski. Every figure and quote on this page is drawn from public
-                Cloudflare blogs, press releases, and case studies, linked inline and below.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-2 text-sm sm:grid-cols-3">
-              <Cite href={S.waitingRoom}>Waiting Room launch</Cite>
-              <Cite href={S.tech}>Engineering deep-dive</Cite>
-              <Cite href={S.fairShot}>Project Fair Shot</Cite>
-              <Cite href={S.fairShotUpdate}>Fair Shot update</Cite>
-              <Cite href={S.press}>Press release</Cite>
-              <Cite href={S.bypass}>Bypass Rules</Cite>
-              <Cite href={S.caseSLO}>San Luis Obispo</Cite>
-              <Cite href={S.caseVerto}>Verto Health</Cite>
-              <Cite href={S.caseLatvia}>Latvia</Cite>
-            </div>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-sm sm:grid-cols-3 lg:grid-cols-5">
+            <Cite href={S.waitingRoom}>Waiting Room launch</Cite>
+            <Cite href={S.tech}>Engineering deep-dive</Cite>
+            <Cite href={S.fairShot}>Project Fair Shot</Cite>
+            <Cite href={S.fairShotUpdate}>Fair Shot update</Cite>
+            <Cite href={S.press}>Press release</Cite>
+            <Cite href={S.bypass}>Bypass Rules</Cite>
+            <Cite href={S.caseSLO}>San Luis Obispo</Cite>
+            <Cite href={S.caseVerto}>Verto Health</Cite>
+            <Cite href={S.caseLatvia}>Latvia</Cite>
           </div>
           <Separator className="my-8" />
           <p className="text-xs text-muted-foreground">

@@ -115,19 +115,20 @@ const NAV_IDS = NAV.map((n) => n.id)
 function useActiveSection() {
   const [active, setActive] = useState(NAV_IDS[0])
   useEffect(() => {
-    const els = NAV_IDS.map((id) => document.getElementById(id)).filter(
-      (el): el is HTMLElement => el !== null,
-    )
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setActive(e.target.id)
-        })
-      },
-      { rootMargin: "-25% 0px -65% 0px", threshold: 0 },
-    )
-    els.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    const onScroll = () => {
+      const trigger = window.scrollY + 120
+      let current = NAV_IDS[0]
+      for (const id of NAV_IDS) {
+        const el = document.getElementById(id)
+        if (el && window.scrollY + el.getBoundingClientRect().top <= trigger) {
+          current = id
+        }
+      }
+      setActive(current)
+    }
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
   }, [])
   return active
 }
@@ -135,23 +136,23 @@ function useActiveSection() {
 function SideRail() {
   const active = useActiveSection()
   return (
-    <aside className="fixed left-0 top-0 z-50 hidden h-screen w-56 flex-col justify-between px-7 py-8 lg:flex">
+    <aside className="fixed left-0 top-0 z-50 hidden h-screen w-48 flex-col justify-between px-6 py-8 lg:flex">
       <div>
         <a href="#top" className="flex items-center gap-2.5">
           <span className="flex h-7 w-7 items-center justify-center rounded-md bg-slate-900 text-white">
             <span className="h-2 w-2 rounded-full bg-brand-200" />
           </span>
-          <span className="text-sm font-bold tracking-tight">Waiting Room</span>
+          <span className="text-sm font-medium tracking-tight">Waiting Room</span>
         </a>
-        <nav className="mt-12 flex flex-col gap-1">
+        <nav className="mt-12 flex flex-col gap-0.5">
           {NAV.map((n) => (
             <a
               key={n.id}
               href={`#${n.id}`}
               className={cn(
-                "py-1.5 text-[15px] transition-colors",
+                "py-1.5 text-[13px] font-light transition-colors",
                 active === n.id
-                  ? "font-semibold text-brand-600 dark:text-brand-300"
+                  ? "font-normal text-brand-500 dark:text-brand-200"
                   : "text-muted-foreground/60 hover:text-foreground",
               )}
             >
@@ -337,7 +338,7 @@ const CASE_STUDIES = [
 
 export default function App() {
   return (
-    <div id="top" className="min-h-screen bg-background lg:pl-60">
+    <div id="top" className="min-h-screen bg-background lg:[padding-left:max(13rem,calc(50vw_-_32rem))] lg:[padding-right:max(1.5rem,calc(50vw_-_32rem))]">
       <Nav />
       <SideRail />
 

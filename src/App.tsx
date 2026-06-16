@@ -1,9 +1,10 @@
-import { useEffect, useState, type ReactNode } from "react"
+import { useEffect, useRef, useState, type ReactNode } from "react"
 import {
   Activity,
   AlertTriangle,
   ArrowUpRight,
   CheckCircle2,
+  ChevronDown,
   Clock,
   Globe,
   Layers,
@@ -36,6 +37,8 @@ import { cn } from "@/lib/utils"
 const S = {
   waitingRoom: "https://blog.cloudflare.com/cloudflare-waiting-room/",
   tech: "https://blog.cloudflare.com/building-waiting-room-on-workers-and-durable-objects/",
+  devDocs: "https://developers.cloudflare.com/waiting-room/",
+  apiDocs: "https://developers.cloudflare.com/api/resources/waiting_rooms/methods/list/",
   fairShot: "https://blog.cloudflare.com/project-fair-shot/",
   fairShotUpdate: "https://blog.cloudflare.com/cloudflare-and-covid-19-project-fair-shot-update/",
   fairShotLanding: "https://www.cloudflare.com/fair-shot/",
@@ -164,6 +167,54 @@ function SideRail() {
         </Button>
       </div>
     </aside>
+  )
+}
+
+function DocsMenu() {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!open) return
+    const onDown = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false)
+    }
+    document.addEventListener("mousedown", onDown)
+    document.addEventListener("keydown", onKey)
+    return () => {
+      document.removeEventListener("mousedown", onDown)
+      document.removeEventListener("keydown", onKey)
+    }
+  }, [open])
+  const item =
+    "flex items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-accent"
+  return (
+    <div ref={ref} className="relative">
+      <Button
+        variant="ghost"
+        size="lg"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+      >
+        Docs <ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} />
+      </Button>
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-0 top-full z-50 mt-2 w-52 overflow-hidden rounded-xl border bg-card p-1 shadow-md"
+        >
+          <a role="menuitem" href={S.devDocs} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className={item}>
+            Developer docs <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+          </a>
+          <a role="menuitem" href={S.apiDocs} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className={item}>
+            API reference <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground" />
+          </a>
+        </div>
+      )}
+    </div>
   )
 }
 
@@ -369,6 +420,7 @@ export default function App() {
                   Engineering deep-dive
                 </a>
               </Button>
+              <DocsMenu />
             </div>
 
             <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">

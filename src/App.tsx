@@ -136,15 +136,9 @@ function useActiveSection() {
 function SideRail() {
   const active = useActiveSection()
   return (
-    <aside className="fixed left-0 top-0 z-50 hidden h-screen w-48 flex-col justify-between px-6 py-8 lg:flex">
+    <aside className="fixed left-0 top-0 z-50 hidden h-screen w-48 flex-col justify-between px-6 pb-8 pt-28 lg:flex">
       <div>
-        <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-slate-900 text-white">
-            <span className="h-2 w-2 rounded-full bg-brand-200" />
-          </span>
-          <span className="text-sm font-medium tracking-tight">Waiting Room</span>
-        </a>
-        <nav className="mt-12 flex flex-col gap-0.5">
+        <nav className="flex flex-col gap-0.5">
           {NAV.map((n) => (
             <a
               key={n.id}

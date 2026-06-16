@@ -68,6 +68,18 @@ export default {
         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
+      fontSize: {
+        xs: ["0.6875rem", "1rem"],
+        sm: ["0.8125rem", "1.2rem"],
+        base: ["0.9375rem", "1.45rem"],
+        lg: ["1.0625rem", "1.65rem"],
+        xl: ["1.1875rem", "1.6rem"],
+        "2xl": ["1.375rem", "1.85rem"],
+        "3xl": ["1.6875rem", "2.1rem"],
+        "4xl": ["2rem", "2.25rem"],
+        "5xl": ["2.625rem", "1"],
+        "6xl": ["3.25rem", "1"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

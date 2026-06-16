@@ -144,7 +144,7 @@ function SideRail() {
               key={n.id}
               href={`#${n.id}`}
               className={cn(
-                "py-1.5 text-[13px] font-light transition-colors",
+                "py-1.5 text-[12px] font-light transition-colors",
                 active === n.id
                   ? "font-normal text-brand-500 dark:text-brand-200"
                   : "text-muted-foreground/60 hover:text-foreground",

@@ -85,7 +85,6 @@ function Nav() {
             <span className="h-2 w-2 rounded-full bg-brand-200" />
           </span>
           <span className="text-sm font-bold tracking-tight">Waiting Room</span>
-          <span className="hidden text-sm text-muted-foreground sm:inline">· Case study</span>
         </a>
         <nav className="hidden items-center gap-1 lg:flex">
           {NAV.map((n) => (
@@ -302,11 +301,6 @@ export default function App() {
               and customer success.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild variant="brand" size="lg">
-                <a href="#problem">
-                  Read the case study <ArrowUpRight className="h-4 w-4" />
-                </a>
-              </Button>
               <Button asChild variant="outline" size="lg">
                 <a href={S.waitingRoom} target="_blank" rel="noreferrer">
                   Launch blog (authored)
